@@ -8,42 +8,59 @@ namespace InterfaceExercise
         {
             //TODO Be sure to follow BEST PRACTICES when creating classes and interfaces
 
-            //Create 2 Interfaces called IVehicle & ICompany
+            //DONE - Create 2 Interfaces called IVehicle & ICompany
 
-            //Create 3 classes called Car , Truck , & SUV
-
-            //In your IVehicle:
+            //DONE - Create 3 classes called Car , Truck , & SUV
             
-                /* Create 4 members that Car, Truck, & SUV all have in common.
-                 * Example: public int NumberOfWheels { get; set; }
-                 */
+            //DONE - Now, create objects of your 3 classes and give their members values.
+            //DONE - Creatively display and organize their values
             
-
-            //In ICompany: 
+            var carOne = new Car();
+            carOne.Year = 2023;
+            carOne.Make = "Porsche";
+            carOne.Model = "911";
+            carOne.Color = "red";
+            carOne.OfficeLocation = "Omaha NE";
+            carOne.Logo = "'Star & Moon'";
+            carOne.HasTrunk = true;
+            carOne.EngineInFront = true;
             
-                /* Create 2 members that are specific to each every company
-                 * regardless of vehicle type.
-                 * Example: public string Logo { get; set; }
-                 */
+            carOne.Drive();
+            Console.WriteLine();
 
-            //In each of your Car, Truck, and SUV classes
-
-                /* Create 2 members that are specific to each class
-                 * Example for Car: public bool HasTrunk { get; set; }
-                 * Example for SUV: public int NumberOfSeats { get; set; }
-                 *
-                 * Then, Set each class to inherit from both IVehicle and ICompany and implement their members.
-                 */
-
-            //Now, create objects of your 3 classes and give their members values.
-            //Creatively display and organize their values
+            var truckOne = new Truck();
+            truckOne.Year = 2015;
+            truckOne.Make = "Ford";
+            truckOne.Model = "F150";
+            truckOne.Color = "blue";
+            truckOne.OfficeLocation = "Nashville TN";
             
-            //Option for displaying values: 
+            truckOne.Drive();
+            Console.WriteLine();
+            
+            var suvOne = new Suv();
+            suvOne.Year = 2020;
+            suvOne.Make = "Chevrolet";
+            suvOne.Model = "Traverse";
+            suvOne.Color = "Silver";
+            suvOne.NumberOfSeats = 7;
+            suvOne.HasCargoArea = true;
+            suvOne.Logo = "Maple Trees";
+            suvOne.OfficeLocation = "Fargo ND";
+
+            Console.WriteLine("Type of Vehicle:");
+            Console.WriteLine($"{suvOne.Year} {suvOne.Make} {suvOne.Model} {suvOne.Color}");
+            suvOne.Drive();
+            Console.WriteLine("---------------");
+
+
+
+            // DID NOT DO - Option for displaying values: 
             //Create a stubbed out method called DisplayDetails in your IVehicle interface.
             //Implement the stubbed out method in the derived classes.
             //In the scope of them method, use string interpolation to display property values.
             //In order to also interpolate values from ICompany, research how to extend interfaces.
-            
+
         }
     }
 }
